@@ -1,0 +1,65 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: blueviolet;
+  }
+  
+  .todo-list {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 30px 30px 30px;
+   background-color: blue;
+    border: transparent;
+  }
+  .todo-list .title {
+    padding: 4px 50px;
+    color:aliceblue
+    border: 1px solid black;
+    background-color:darkblue;
+  }
+  .todo-list .label {
+    display: flex;
+    align-items: center;
+    margin: 40px 0;
+    font-size: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+    color:antiquewhite;
+  
+  }
+  
+  .todo-list .label input[type=checkbox] + .check {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+  }
+  .todo-list .label input[type=checkbox]:checked + .check {
+    width: 25px;
+    height: 15px;
+    border-top: transparent;
+    border-right: transparent;
+  }
+  .todo-list .label input[type=checkbox] ~ span {
+    position: relative;
+    left: 40px;
+  
+  }
+  .todo-list .label input[type=checkbox] ~ span::before {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: #f1faee;
+    transform: scaleX(0);
+  
+  }
+  .todo-list .label input[type=checkbox] {
+    color: cadetblue;
+  }
+  .todo-list .label input[type=checkbox]:checked ~ span::before {
+    transform: scaleX(1);
+    
+  }
